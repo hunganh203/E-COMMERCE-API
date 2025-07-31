@@ -44,6 +44,7 @@ namespace EfCore.Persistence
             services.AddTransient<IRoleRepository, RoleRepository>();
             services.AddTransient<IUserRoleRepository, UserRoleRepository>();
             services.AddTransient<IUserClaimRepository, UserClaimRepository>();
+            services.AddTransient<IFileStorageRepository, FileStorageRepository>();
         }
     }
 }

@@ -33,6 +33,8 @@ namespace Shared
             services.AddTransient<IProductDisplayService, ProductDisplayService>();
             services.AddTransient<ISetupService, SetupService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IFilePathService, FilePathService>();
+            services.AddTransient<IFileStorageService, FileStorageService>();
         }
     }
 }

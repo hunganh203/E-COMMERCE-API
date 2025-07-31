@@ -253,16 +253,15 @@ namespace Shared.Services
         {
             var result = order.OrderDetails.Where(x => x.IsUsed).Sum(orderOrderDetail => (orderOrderDetail.Quantity ?? 0) * (orderOrderDetail.ProductDiscountPrice ?? 0));
             result -= order.DiscountPrice ?? 0;
-            return result < 0 ? 0 : result; ;
+            return result < 0 ? 0 : result;
         }
 
-        private int HandleStatusOrder(Order order)
+        private int HandleStatusOrder(Order? order)
         {
             if (order?.OrderDetails == null || order.OrderDetails.Count <= 0)
             {
                 return -2;
-            } 
-
+            }
 
             if (order.SystemStatus == OrderConst.OrderSystemStatus.Process
                 && order.OrderDetails.Any(od => od.IsUsed && od.Status == OrderConst.InProcessStatus.PendingConfirmImportProduct))
@@ -277,7 +276,7 @@ namespace Shared.Services
             }
 
             if (order.SystemStatus == OrderConst.OrderSystemStatus.InProcess
-              &&( order.OrderDetails.Any(od => od.IsUsed && od.Status == OrderConst.InProcessStatus.WaitCustomerApprove)
+              && (order.OrderDetails.Any(od => od.IsUsed && od.Status == OrderConst.InProcessStatus.WaitCustomerApprove)
                   || order.OrderDetails.Any(od => od.IsUsed && od.Status == OrderConst.InProcessStatus.ImportingProduct)))
             {
                 return OrderConst.OrderStatus.ImportingProduct;
