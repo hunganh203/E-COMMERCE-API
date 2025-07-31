@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+    dobby:
+        image: dobby/host
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Production
+        ports:
+            - "1325:80"
+        depends_on:
+            - dobby_db
+        volumes:
+            - "./Host-Logs:/app/App_Data/Logs"
+
+    dobby_ng:
+        image: dobby/ng
+        ports:
+            - "2000:80"
+        volumes:
+            - "./nginx.conf:/etc/nginx/nginx.conf:ro"
+    dobby_db:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        environment:
+            SA_PASSWORD: "w+IfO9FF5by1TlrouTx"
+            ACCEPT_EULA: "Y"
+        ports:
+            - "1433:1433"

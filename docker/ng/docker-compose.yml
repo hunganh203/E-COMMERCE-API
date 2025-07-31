@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+    ecommerce:
+        image: ndphuc/ecommerce_api
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Production
+        ports:
+            - "1325:1325"
+        depends_on:
+            - ecommerce_db
+        volumes:
+            - "./Host-Logs:/app/App_Data/Logs"
+
+   
+    ecommerce_db:
+        image: mcr.microsoft.com/mssql/server
+        environment:
+            SA_PASSWORD: "w+IfO9FF5by1TlrouTx"
+            ACCEPT_EULA: "Y"
+        ports:
+            - "1433:1433"
+            
+            

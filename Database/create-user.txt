@@ -1,0 +1,52 @@
+USE [ECommerce]
+GO
+SET IDENTITY_INSERT [dbo].[Attribute] ON 
+
+INSERT [dbo].[Attribute] ([Id], [Name]) VALUES (9, N'Màu sắc')
+INSERT [dbo].[Attribute] ([Id], [Name]) VALUES (10, N'Loại')
+INSERT [dbo].[Attribute] ([Id], [Name]) VALUES (11, N'Cấu hình')
+SET IDENTITY_INSERT [dbo].[Attribute] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Menu] ON 
+
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (1, NULL, N'main', N'Điện thoại', N'dien-thoai-1', 1000, 1, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (2, NULL, N'main', N'Máy tính & Laptop', N'may-tinh-laptop-2', 2000, 1, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (3, NULL, N'main', N'Phụ kiện', N'phu-kien-3-3', 3000, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (4, NULL, N'main', N'Đồng hồ', N'dong-ho-4-4', 4000, 1, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (5, NULL, N'main', N'Thời trang nam', N'thoi-trang-nam-5', 5000, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (6, NULL, N'main', N'Thời trang nữ', N'thoi-trang-nu-6-6', 6000, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (8, NULL, N'main', N'Tin tức & Sự kiện', N'tin-tuc-su-kien-8-8-8', 7000, 0, N'bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (9, 3, N'main', N'Pin sạc dự phòng', N'pin-sac-du-phong-9', 3010, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (10, 3, N'main', N'Chuột, bàn phím', N'chuot-ban-phim-10', 3020, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (11, 3, N'main', N'Ốp lưng điện thoại', N'op-lung-dien-thoai-11', 3030, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (12, NULL, N'sub', N'Về chúng tôi', N've-chung-toi-12', 10, 0, N'chi-tiet-bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (13, NULL, N'sub', N'Chính sách bảo hành', N'chinh-sach-bao-hanh-13-13', 20, 0, N'chi-tiet-bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (14, NULL, N'sub', N'Chính sách bảo mật', N'chinh-sach-bao-mat-14-14-14', 30, 0, N'chi-tiet-bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (15, NULL, N'sub', N'Hướng dẫn thanh toán', N'huong-dan-thanh-toan-15-15', 40, 0, N'chi-tiet-bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (16, NULL, N'sub', N'Hướng dẫn mua hàng', N'huong-dan-mua-hang-16-16', 50, 0, N'chi-tiet-bai-viet', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (24, NULL, N'main', N'Linh kiện PC - Máy tính', N'linh-kien-pc---may-tinh-24', 6500, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (25, 2, N'main', N'Laptop Gaming', N'laptop-gaming-25', 2010, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (26, 2, N'main', N'Laptop đồ họa', N'laptop-do-hoa-26', 2020, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (27, 2, N'main', N'Laptop mỏng nhẹ', N'laptop-mong-nhe-27', 2030, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (28, 2, N'main', N'Laptop Dell', N'laptop-dell-28', 2040, 0, N'san-pham', 1)
+INSERT [dbo].[Menu] ([Id], [ParentMenu], [Group], [Name], [Alias], [Index], [ShowHomePage], [Type], [Active]) VALUES (29, 2, N'main', N'Macbook', N'macbook-29', 2050, 0, N'san-pham', 1)
+SET IDENTITY_INSERT [dbo].[Menu] OFF
+GO
+INSERT [dbo].[Product] ([Id], [MenuId], [Name], [Alias], [Image], [Index], [Status], [Price], [DiscountPrice], [Selling], [ShortDescription], [Description]) VALUES (N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', 25, N'aaaa', N'aaaa-5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', N'2022/04/2055f273-a485-4ca1-83b0-2d12d5f1c1b4.jpg', 1, 10, 5555555550, 55555555500, 1, N'5,555,555,550', N'5,555,555,550')
+GO
+SET IDENTITY_INSERT [dbo].[ProductAttribute] ON 
+
+INSERT [dbo].[ProductAttribute] ([ProductId], [AttributeId], [Id], [Value]) VALUES (N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', 10, 1, N'a,b,v,d')
+INSERT [dbo].[ProductAttribute] ([ProductId], [AttributeId], [Id], [Value]) VALUES (N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', 11, 2, N'E,f,g,h')
+SET IDENTITY_INSERT [dbo].[ProductAttribute] OFF
+GO
+INSERT [dbo].[ProductImage] ([Id], [ProductId], [Image]) VALUES (N'13556af8-bc36-48ce-b0e3-00eef081c34b', N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', N'2022/04/13556af8-bc36-48ce-b0e3-00eef081c34b.jpg')
+INSERT [dbo].[ProductImage] ([Id], [ProductId], [Image]) VALUES (N'1f99e49a-d8df-4dd7-a67d-08da336a0b1e', N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', N'2022/04/82c89b1e-27cc-4c75-bb27-325c7df2eba4.jpg')
+INSERT [dbo].[ProductImage] ([Id], [ProductId], [Image]) VALUES (N'7ceacc3a-594e-4df5-a67e-08da336a0b1e', N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', N'2022/04/532419aa-959e-4ea7-8caa-d9964f3be9cd.jpg')
+INSERT [dbo].[ProductImage] ([Id], [ProductId], [Image]) VALUES (N'cbe19fe3-8c9c-4bdb-bbad-f4e1db724b30', N'5d8a5680-9e5c-4ec2-b45f-eee190e5d13c', N'2022/04/cbe19fe3-8c9c-4bdb-bbad-f4e1db724b30.png')
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+
+INSERT [dbo].[User] ([Id], [UserName], [NormalizedUserName], [Email], [Avatar], [NormalizedEmail], [PasswordHash], [PhoneNumber], [LockoutEnabled], [AccessFailedCount], [LockoutEnd], [LastName], [FirstName], [IsDeleted], [IsVerifiedPhone], [IsVerifiedEmail], [PasswordResetToken], [PasswordResetExpiration]) VALUES (1, N'admin', N'admin', N'admin@gmail.com', N' ', N'admin@gmail.com', N'mJjVzTQ0VxiwJst3Ts7c1TqO+wrz+964YAj6BlE1rqzRyhUjC70kuF4wbGUlPQCXsQlqb4anBnGe9y3bbFJmDw==', N' ', 0, 0, CAST(N'2022-01-01T00:00:00.0000000+07:00' AS DateTimeOffset), N'Trị', N'Quản', 0, 1, 1, N' ', CAST(N'2022-01-01T00:00:00.0000000' AS DateTime2))
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
