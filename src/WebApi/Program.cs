@@ -57,6 +57,14 @@ builder.Services.AddSingleton(verificationConfiguration);
 
 #endregion Verification
 
+#region FileStorageSettingsOptions
+
+var fileStorageSettingsOptions = new FileStorageSettingsOptions();
+configuration.Bind("FileStorageSettings", fileStorageSettingsOptions);
+builder.Services.AddSingleton(fileStorageSettingsOptions);
+
+#endregion FileStorageSettingsOptions
+
 #endregion Loading Configurations
 
 builder.Services.AddControllers();
